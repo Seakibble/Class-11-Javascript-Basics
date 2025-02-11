@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <h1>Guessing Game!</h1>
+
+        <p id="output">Guess a number from 1 to 100.</p>
+
+        <input id="input" type="number">
+        <button id="guess" onclick="Check()">Guess</button>
+        <button id="restart" onclick="Restart()" class="hidden">Start New Game</button>
+    </main>
+
+    <script src="scripts/guessing-game.js"></script>
+</body>
+</html>

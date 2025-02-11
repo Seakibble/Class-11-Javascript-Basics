@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 11 - JavaScript Basics</title>
+
+    <style>
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Hello</h1>
+
+    <button onclick="ChangeHeading()">Click me</button>
+    <button onclick="RevertHeading()">Revert</button>
+
+
+    <script>
+        console.log("Hello World");
+        // Semi colons are optional
+        console.log("Hello World")
+
+        var age = 29
+        age = age + 0.5
+
+        let name = "Max"
+
+        const birthday = "03/07/1995"
+        // birthday = "03/06/1995"
+
+        console.log(age, name, birthday)
+
+        console.log(name + ", Age: " + age)
+        console.log(8 + "8")
+
+        // Shorthands for calculations.
+        age += 0.5
+
+        // if statements let us check against different values of variables
+        if (age > 30) {
+            console.log(name + " is old!")
+        } else if (age == 30) {
+            console.log(name + " is on the edge!")
+        } else {
+            console.log(name + " is barely young!")
+        }
+
+        // Switch statements
+        switch(name) {
+            case "Max": 
+                console.log("Hello Max")
+                break;
+            case "Chloe": 
+                console.log("Hello Chloe")
+                break;
+            default:
+            console.log("I don't know you.")
+        }
+
+
+        // Functions can be declared like this
+        // function arguments can have any name, but I like giving them underscores to differentiate them from other variables
+        function Birthday(_name) {
+            age += 1
+            console.log(_name + " is now " + age + " years old.")
+        }
+
+
+        function ChangeHeading() {
+            let $heading = document.getElementById('heading')
+            $heading.innerText = "My name is Max"
+            $heading.classList.add('red')
+        }
+
+        function RevertHeading() {
+            let $heading = document.getElementById('heading')
+            $heading.innerText = "Hello World"
+            $heading.classList.remove('red')
+        }
+        
+        // let fruit = "apple"
+        // let fruit2 = "banana"
+        // let fruit3 = "orange"
+
+        let fruit = ['apple', 'banana', 'orange']
+
+    </script>
+</body>
+</html>
